@@ -3,12 +3,12 @@ import '../styles/animations.css';
 import '../styles/layout.css';
 import '../styles/timeline.css';
 import '../styles/scrollIndicator.css';
-import TopSection from './topSection';
-import SummarySection from './summarySection';
-import WorkSection from './workSection';
 import EducationSection from './educationSection';
-import SkillsSection from './skillsSection';
 import FooterSection from './footerSection';
+import SkillsSection from './skillsSection';
+import SummarySection from './summarySection';
+import TopSection from './topSection';
+import WorkSection from './workSection';
 
 export default function HomeContainer() {
   const [isLoaded, setIsLoaded] = useState(false);
