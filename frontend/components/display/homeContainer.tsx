@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 import '../styles/animations.css';
 import '../styles/layout.css';
 import '../styles/timeline.css';
@@ -13,32 +14,7 @@ import WorkSection from './workSection';
 export default function HomeContainer() {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {
-    // ページ描画後にフェードイン開始
-    setIsLoaded(true);
-
-    // スクロールアニメーション用のIntersectionObserver
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.1 },
-    );
-
-    // セクションの監視を開始
-    document.querySelectorAll('.section').forEach((section) => {
-      observer.observe(section);
-    });
-
-    // クリーンアップ関数
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+  useIntersectionObserver(setIsLoaded);
 
   return (
     <div className='scroll-behavior: smooth; overflow-y: auto; height: 100vh;'>
