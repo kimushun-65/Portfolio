@@ -83,6 +83,17 @@ export default function HomeContainer() {
               <div className='text-lg text-white'>京都大学工学部情報学科</div>
             </div>
           </div>
+          <div className='section work'>
+            <h2>Work Experience</h2>
+            <p>React, TypeScript, Next.js, Tailwind CSS, Node.js, Express</p>
+          </div>
+          <div className='section skills'>
+            <h2>Skills</h2>
+            <p>React, TypeScript, Next.js, Tailwind CSS, Node.js, Express</p>
+          </div>
+        </div>
+        <div className='flex items-center justify-center'>
+          <p>© 2025 Shunsuke&apos;s Portfolio</p>
         </div>
       </div>
     </div>
