@@ -1,4 +1,8 @@
 import { useState, useEffect } from 'react';
+import '../styles/animations.css';
+import '../styles/layout.css';
+import '../styles/timeline.css';
+import '../styles/scrollIndicator.css';
 
 export default function HomeContainer() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -81,131 +85,6 @@ export default function HomeContainer() {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        /* フェードインアニメーション */
-        .fadeIn {
-          animation: fadeIn 1.5s ease forwards;
-        }
-        @keyframes fadeIn {
-          0% {
-            opacity: 0;
-            transform: translateY(15px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        /* コンテンツセクション */
-        .content-section {
-          position: relative;
-          min-height: 100vh;
-          background-color: #000;
-          color: #fff;
-          padding: 4rem 2rem;
-          margin-top: 20vh;
-          box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.5);
-          z-index: 2;
-        }
-
-        #top {
-          position: sticky;
-          top: 0;
-          z-index: 1;
-          height: 100vh;
-          transform-style: preserve-3d;
-          transform: translateZ(0);
-        }
-
-        /* スクロールダウンインジケーター */
-        .scroll-down-indicator {
-          position: absolute;
-          bottom: 2rem;
-          left: 50%;
-          transform: translateX(-50%);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          animation: bounce 2s infinite;
-          color: #fff;
-        }
-
-        .scroll-down-indicator span {
-          margin-bottom: 0.5rem;
-          font-size: 0.9rem;
-          letter-spacing: 0.1em;
-        }
-
-        .arrow {
-          width: 20px;
-          height: 20px;
-          border-right: 2px solid #fff;
-          border-bottom: 2px solid #fff;
-          transform: rotate(45deg);
-        }
-
-        @keyframes bounce {
-          0%,
-          20%,
-          50%,
-          80%,
-          100% {
-            transform: translateY(0) translateX(-50%);
-          }
-          40% {
-            transform: translateY(-20px) translateX(-50%);
-          }
-          60% {
-            transform: translateY(-10px) translateX(-50%);
-          }
-        }
-
-        /* タイムライン */
-        .timeline {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-
-        .section {
-          margin-bottom: 4rem;
-          padding-left: 2rem;
-          border-left: 2px solid #00ffff;
-          opacity: 0;
-          transform: translateY(20px);
-          transition:
-            opacity 0.5s,
-            transform 0.5s;
-        }
-
-        .section.visible {
-          opacity: 1;
-          transform: translateY(0);
-        }
-
-        h2 {
-          color: #00ffff;
-          font-size: 1.5rem;
-          margin-bottom: 1.5rem;
-        }
-
-        .timeline-item {
-          margin-bottom: 1.5rem;
-          position: relative;
-        }
-
-        .timeline-item::before {
-          content: '';
-          position: absolute;
-          left: -2.5rem;
-          top: 0.5rem;
-          width: 1rem;
-          height: 1rem;
-          background-color: #00ffff;
-          border-radius: 50%;
-        }
-      `}</style>
     </div>
   );
 }

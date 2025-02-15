@@ -1,0 +1,19 @@
+.content-section {
+  position: relative;
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 2rem;
+  margin-top: 20vh;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+#top {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 100vh;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+}
