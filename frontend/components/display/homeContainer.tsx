@@ -31,7 +31,7 @@ export default function HomeContainer() {
   }, []);
 
   return (
-    <div className='scroll-container'>
+    <div className='scroll-behavior: smooth; overflow-y: auto; height: 100vh;'>
       <div
         id='top'
         className={`relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-[url('/images/starBack.webp')] bg-cover bg-fixed bg-center text-white ${isLoaded ? 'fadeIn' : 'opacity-0'}`}
@@ -40,9 +40,6 @@ export default function HomeContainer() {
           <span>Scroll Down</span>
           <div className='arrow'></div>
         </div>
-        <div className='star-layer-1'></div>
-        <div className='star-layer-2'></div>
-        <div className='star-layer-3'></div>
         <h1 className='mb-4 text-4xl font-bold'>Shunsuke&apos;s Portfolio</h1>
         <p className='text-xl'>Welcome to my site</p>
       </div>
@@ -62,7 +59,7 @@ export default function HomeContainer() {
           <div className='section work'>
             <h2>Work Experience</h2>
             <div className='timeline-item'>
-              <div className='date'>2022/4〜現在</div>
+              <div className='mb-2 text-sm text-cyan-400'>2022/4〜現在</div>
               <div className='company'>株式会社 STAR UP</div>
               <p>
                 研究者向けWebアプリ開発に従事。主にフロントエンドを担当している。
@@ -74,24 +71,18 @@ export default function HomeContainer() {
           <div className='section education'>
             <h2>Education</h2>
             <div className='timeline-item'>
-              <div className='date'>2020/4-2022/3</div>
-              <div className='school'>京都大学工学研究科</div>
+              <div className='mb-2 text-sm text-cyan-400'>2020/4-2022/3</div>
+              <div className='text-lg text-white'>京都大学工学研究科</div>
             </div>
             <div className='timeline-item'>
-              <div className='date'>2016/4-2020/3</div>
-              <div className='school'>京都大学工学部情報学科</div>
+              <div className='mb-2 text-sm text-cyan-400'>2016/4-2020/3</div>
+              <div className='text-lg text-white'>京都大学工学部情報学科</div>
             </div>
           </div>
         </div>
       </div>
 
       <style jsx>{`
-        .scroll-container {
-          scroll-behavior: smooth;
-          overflow-y: auto;
-          height: 100vh;
-        }
-
         /* フェードインアニメーション */
         .fadeIn {
           animation: fadeIn 1.5s ease forwards;
@@ -104,101 +95,6 @@ export default function HomeContainer() {
           100% {
             opacity: 1;
             transform: translateY(0);
-          }
-        }
-
-        /* 星空の背景レイヤー */
-        .star-layer-1,
-        .star-layer-2,
-        .star-layer-3 {
-          position: absolute;
-          top: -100%;
-          left: -100%;
-          width: 300%;
-          height: 300%;
-          pointer-events: none;
-          background-repeat: repeat;
-        }
-
-        /* 一番遠い星のレイヤー */
-        .star-layer-1 {
-          background-image:
-            radial-gradient(
-              1px 1px at 10% 10%,
-              #fff 10%,
-              rgba(255, 255, 255, 0.8) 20%,
-              rgba(255, 255, 255, 0.2) 40%,
-              transparent 100%
-            ),
-            radial-gradient(
-              1px 1px at 30% 40%,
-              #fff 10%,
-              rgba(255, 255, 255, 0.8) 20%,
-              rgba(255, 255, 255, 0.2) 40%,
-              transparent 100%
-            );
-          animation: moveBackground 150s linear infinite;
-          opacity: 0.5;
-        }
-
-        /* 中間の星のレイヤー */
-        .star-layer-2 {
-          background-image:
-            radial-gradient(
-              2px 2px at 50% 60%,
-              #fff 10%,
-              rgba(255, 255, 255, 0.8) 20%,
-              rgba(255, 255, 255, 0.2) 40%,
-              transparent 100%
-            ),
-            radial-gradient(
-              2px 2px at 70% 20%,
-              #fff 10%,
-              rgba(255, 255, 255, 0.8) 20%,
-              rgba(255, 255, 255, 0.2) 40%,
-              transparent 100%
-            );
-          animation: moveBackground 100s linear infinite;
-          opacity: 0.7;
-        }
-
-        /* 一番近い星のレイヤー */
-        .star-layer-3 {
-          background-image:
-            radial-gradient(
-              3px 3px at 20% 30%,
-              #fff 10%,
-              rgba(255, 255, 255, 0.9) 20%,
-              rgba(255, 255, 255, 0.3) 40%,
-              transparent 100%
-            ),
-            radial-gradient(
-              3px 3px at 80% 50%,
-              #fff 10%,
-              rgba(255, 255, 255, 0.9) 20%,
-              rgba(255, 255, 255, 0.3) 40%,
-              transparent 100%
-            );
-          animation: moveBackground 50s linear infinite;
-          opacity: 0.9;
-        }
-
-        /* 背景の移動アニメーション */
-        @keyframes moveBackground {
-          0% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-          25% {
-            transform: translate(2%, 2%) rotate(2deg);
-          }
-          50% {
-            transform: translate(0, 4%) rotate(0deg);
-          }
-          75% {
-            transform: translate(-2%, 2%) rotate(-2deg);
-          }
-          100% {
-            transform: translate(0, 0) rotate(0deg);
           }
         }
 
@@ -308,12 +204,6 @@ export default function HomeContainer() {
           height: 1rem;
           background-color: #00ffff;
           border-radius: 50%;
-        }
-
-        .date {
-          color: #00ffff;
-          font-size: 0.9rem;
-          margin-bottom: 0.5rem;
         }
       `}</style>
     </div>
