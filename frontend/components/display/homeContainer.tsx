@@ -9,6 +9,7 @@ import FooterSection from './footerSection';
 import SkillsSection from './skillsSection';
 import SummarySection from './summarySection';
 import TopSection from './topSection';
+import WorkExperienceSection from './workExperienceSection';
 import WorkSection from './workSection';
 
 export default function HomeContainer() {
@@ -22,8 +23,9 @@ export default function HomeContainer() {
       <div className='content-section'>
         <div className='timeline'>
           <SummarySection />
-          <WorkSection />
+          <WorkExperienceSection />
           <EducationSection />
+          <WorkSection />
           <SkillsSection />
         </div>
         <FooterSection />
