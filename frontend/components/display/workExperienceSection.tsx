@@ -3,7 +3,7 @@ export default function WorkExperienceSection() {
     <div className='section work'>
       <h2>Work Experience</h2>
       <div className='timeline-item'>
-        <div className='mb-2 text-sm text-blue-200'>2022/4〜現在</div>
+        <div className='mb-2 text-sm text-blue-200'>2024/10〜現在</div>
         <div className='company'>株式会社 STAR UP</div>
         <p>
           研究者向けWebアプリ開発に従事。主にフロントエンドを担当している。
