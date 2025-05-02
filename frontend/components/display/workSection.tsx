@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 // Modal component
 const Modal = ({

@@ -9,16 +9,16 @@ export default function WorkExperienceSection() {
           2024/10〜現在
         </div>
         <div className='company flex items-center font-semibold'>
-        <Image
+          <Image
             src='/images/starup.png'
             alt='Star Up Logo'
             width={32}
             height={32}
-            className='ml-2 rounded-md mr-3'
+            className='ml-2 mr-3 rounded-md'
           />
           株式会社 STAR UP
         </div>
-        <p className='font-semibold mt-2'>
+        <p className='mt-2 font-semibold'>
           受託開発事業部に在籍し、主にフロントエンドの開発を行っている。
         </p>
         <p className='font-semibold'>
