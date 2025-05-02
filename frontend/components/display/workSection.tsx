@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 // Modal component
 const Modal = ({
@@ -15,6 +15,8 @@ const Modal = ({
   description: string;
   imageSrc: string;
 }) => {
+  const modalRef = useRef<HTMLDivElement>(null);
+
   // Close modal when Escape key is pressed
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
@@ -28,15 +30,32 @@ const Modal = ({
     };
   }, [isOpen, onClose]);
 
+  // Scroll to modal when it opens
+  useEffect(() => {
+    if (isOpen && modalRef.current) {
+      modalRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    }
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
     <div
-      className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 p-4'
+      className='fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-black bg-opacity-70 p-4'
       onClick={onClose}
     >
       <div
-        className='relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-lg bg-gray-800 shadow-xl'
+        ref={modalRef}
+        className='relative max-h-[90vh] w-full max-w-4xl translate-x-0 translate-y-0 transform overflow-y-auto rounded-lg bg-gray-800 shadow-xl'
+        style={{
+          position: 'fixed',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+        }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
