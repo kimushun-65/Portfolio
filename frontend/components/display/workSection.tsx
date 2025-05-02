@@ -120,22 +120,22 @@ export default function WorkSection() {
     },
     {
       id: 2,
-      title: "ECサイト管理システム",
+      title: "発注システム",
       description: "React、Node.js、MySQLを使用して開発したECサイト向け在庫管理システム。商品の在庫状況をリアルタイムで把握し、発注のタイミングを自動で提案する機能を実装。売上データの分析機能も備えており、経営判断をサポートします。\n\n主な機能:\n・在庫管理\n・発注管理\n・売上分析\n・ユーザー管理\n\n使用技術:\n・React\n・Node.js\n・Express\n・MySQL\n・Chart.js",
       imageSrc: "/images/starBack.webp" // 仮の画像パス
     },
     {
       id: 3,
-      title: "天気予報アプリ",
+      title: "お寿司屋さんのタブレット注文アプリ",
       description: "React NativeとOpenWeather APIを使用して開発したモバイルアプリ。ユーザーの現在地に基づいた天気予報を表示し、週間予報や気象警報の通知機能も実装。シンプルなUIで使いやすさを重視しました。\n\n主な機能:\n・現在の天気表示\n・週間予報\n・気象警報通知\n・位置情報連携\n\n使用技術:\n・React Native\n・Expo\n・OpenWeather API\n・Geolocation API",
       imageSrc: "/images/starBack.webp" // 仮の画像パス
     },
     {
       id: 4,
-      title: "タスク管理ツール",
+      title: "Break Filter Bubble",
       description: "Vue.jsとFirebaseを使用して開発したタスク管理ツール。ドラッグ＆ドロップでタスクの優先順位を変更できる機能や、期限が近づくとリマインダーを送信する機能を実装。チームでの共同作業をスムーズにするための共有機能も備えています。\n\n主な機能:\n・タスク作成・編集・削除\n・ドラッグ＆ドロップでの並べ替え\n・期限リマインダー\n・チーム共有機能\n\n使用技術:\n・Vue.js\n・Vuex\n・Firebase\n・Firestore\n・Firebase Authentication",
       imageSrc: "/images/starBack.webp" // 仮の画像パス
-    }
+    },
   ];
 
   const openModal = (index: number) => {
