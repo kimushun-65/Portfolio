@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
 
-// Modal component
 const Modal = ({
   isOpen,
   onClose,
@@ -17,7 +16,6 @@ const Modal = ({
 }) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
-  // Close modal when Escape key is pressed
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
       if (event.key === 'Escape') onClose();
@@ -30,7 +28,6 @@ const Modal = ({
     };
   }, [isOpen, onClose]);
 
-  // Scroll to modal when it opens
   useEffect(() => {
     if (isOpen && modalRef.current) {
       modalRef.current.scrollIntoView({
@@ -58,7 +55,6 @@ const Modal = ({
         }}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Close button */}
         <button
           className='absolute right-4 top-4 z-10 rounded-full bg-gray-800 bg-opacity-70 p-2 text-gray-400 hover:text-white'
           onClick={onClose}
@@ -79,7 +75,6 @@ const Modal = ({
           </svg>
         </button>
 
-        {/* Modal content */}
         <div className='relative w-full' style={{ height: '60vh' }}>
           <Image src={imageSrc} alt={title} fill className='object-contain' />
         </div>
@@ -93,7 +88,6 @@ const Modal = ({
   );
 };
 
-// Work item component
 const WorkItem = ({
   title,
   description,
@@ -204,7 +198,6 @@ export default function WorkSection() {
         ))}
       </div>
 
-      {/* Modal */}
       {selectedWork !== null && (
         <Modal
           isOpen={isModalOpen}
