@@ -64,6 +64,7 @@ export default function SkillsSection() {
       level: 4,
       color: 'bg-purple-600 border border-purple-400',
     },
+    {name:'Ruby on Rails', level: 2, color: 'bg-purple-600 border border-purple-400'},
   ];
 
   // Tools skills with levels
