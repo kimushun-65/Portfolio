@@ -21,6 +21,23 @@ export default function HomeContainer() {
     <div className='scroll-behavior: smooth; overflow-y: auto; height: 100vh;'>
       <TopSection isLoaded={isLoaded} />
       <div className='content-section'>
+        <ul className='squares'>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
         <div className='timeline'>
           <SummarySection />
           <WorkExperienceSection />
