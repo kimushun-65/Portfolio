@@ -79,7 +79,7 @@ export default function TopSection({ isLoaded }: TopSectionProps) {
       <div className='relative z-10 flex flex-col items-center justify-center px-4'>
         {/* メインタイトル */}
         <div className='mb-8 text-center'>
-          <h1 className='mb-6 text-5xl font-bold tracking-tight text-white md:text-7xl'>
+          <h1 className='mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-400 bg-clip-text text-5xl font-bold tracking-tight text-transparent md:text-7xl'>
             Shunsuke Kimura
           </h1>
 
