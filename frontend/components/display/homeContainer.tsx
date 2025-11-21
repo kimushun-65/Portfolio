@@ -6,6 +6,7 @@ import '../styles/timeline.css';
 import '../styles/scrollIndicator.css';
 import EducationSection from './educationSection';
 import FooterSection from './footerSection';
+import Header from './Header';
 import SkillsSection from './skillsSection';
 import SummarySection from './summarySection';
 import TopSection from './topSection';
@@ -18,15 +19,26 @@ export default function HomeContainer() {
   useIntersectionObserver(setIsLoaded);
 
   return (
-    <div className='scroll-behavior: smooth; overflow-y: auto; height: 100vh;'>
+    <div className='relative scroll-behavior: smooth; overflow-y: auto; height: 100vh;'>
+      <Header />
       <TopSection isLoaded={isLoaded} />
-      <div className='content-section'>
+      <div className='content-section relative z-10'>
         <div className='timeline'>
-          <SummarySection />
-          <WorkExperienceSection />
-          <EducationSection />
-          <WorkSection />
-          <SkillsSection />
+          <div id='about'>
+            <SummarySection />
+          </div>
+          <div id='work-experience'>
+            <WorkExperienceSection />
+          </div>
+          <div id='education'>
+            <EducationSection />
+          </div>
+          <div id='works'>
+            <WorkSection />
+          </div>
+          <div id='skills'>
+            <SkillsSection />
+          </div>
         </div>
         <FooterSection />
       </div>
