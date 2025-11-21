@@ -9,14 +9,43 @@
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
     "import/order": [
-      "error",
+      "warn",
       {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "next/**",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react", "next"],
         "alphabetize": {
-          "order": "asc"
-        }
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "never"
       }
     ],
-    "prettier/prettier": "error",
-    "import/no-unresolved": "off"
+    "prettier/prettier": [
+      "warn",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "import/no-unresolved": "off",
+    "react/no-unescaped-entities": "off"
   }
 }

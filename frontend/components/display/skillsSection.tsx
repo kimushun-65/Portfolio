@@ -24,7 +24,7 @@ const SkillBar = ({
           setTimeout(() => setIsVisible(true), delay);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (barRef.current) {
@@ -57,26 +57,74 @@ const SkillBar = ({
 export default function SkillsSection() {
   // Frontend skills with levels
   const frontendSkills = [
-    { name: 'React', level: 4, color: 'bg-gradient-to-r from-cyan-400 to-blue-500' },
-    { name: 'Next.js', level: 4, color: 'bg-gradient-to-r from-cyan-400 to-blue-500' },
-    { name: 'TypeScript', level: 4, color: 'bg-gradient-to-r from-cyan-400 to-blue-500' },
-    { name: 'FSD Architecture', level: 4, color: 'bg-gradient-to-r from-cyan-400 to-blue-500' },
+    {
+      name: 'React',
+      level: 4,
+      color: 'bg-gradient-to-r from-cyan-400 to-blue-500',
+    },
+    {
+      name: 'Next.js',
+      level: 4,
+      color: 'bg-gradient-to-r from-cyan-400 to-blue-500',
+    },
+    {
+      name: 'TypeScript',
+      level: 4,
+      color: 'bg-gradient-to-r from-cyan-400 to-blue-500',
+    },
+    {
+      name: 'FSD Architecture',
+      level: 4,
+      color: 'bg-gradient-to-r from-cyan-400 to-blue-500',
+    },
   ];
 
   // Backend skills with levels
   const backendSkills = [
-    { name: 'Python', level: 4, color: 'bg-gradient-to-r from-purple-400 to-pink-500' },
-    { name: 'FastAPI', level: 4, color: 'bg-gradient-to-r from-purple-400 to-pink-500' },
-    { name: 'Go', level: 3, color: 'bg-gradient-to-r from-purple-400 to-pink-500' },
-    { name: 'Onion Architecture', level: 4, color: 'bg-gradient-to-r from-purple-400 to-pink-500' },
+    {
+      name: 'Python',
+      level: 4,
+      color: 'bg-gradient-to-r from-purple-400 to-pink-500',
+    },
+    {
+      name: 'FastAPI',
+      level: 4,
+      color: 'bg-gradient-to-r from-purple-400 to-pink-500',
+    },
+    {
+      name: 'Go',
+      level: 3,
+      color: 'bg-gradient-to-r from-purple-400 to-pink-500',
+    },
+    {
+      name: 'Onion Architecture',
+      level: 4,
+      color: 'bg-gradient-to-r from-purple-400 to-pink-500',
+    },
   ];
 
   // Tools skills with levels
   const toolsSkills = [
-    { name: 'MySQL/PostgreSQL', level: 3, color: 'bg-gradient-to-r from-orange-400 to-red-500' },
-    { name: 'AWS', level: 3, color: 'bg-gradient-to-r from-orange-400 to-red-500' },
-    { name: 'Docker', level: 3, color: 'bg-gradient-to-r from-orange-400 to-red-500' },
-    { name: 'Git', level: 3, color: 'bg-gradient-to-r from-orange-400 to-red-500' },
+    {
+      name: 'MySQL/PostgreSQL',
+      level: 3,
+      color: 'bg-gradient-to-r from-orange-400 to-red-500',
+    },
+    {
+      name: 'AWS',
+      level: 3,
+      color: 'bg-gradient-to-r from-orange-400 to-red-500',
+    },
+    {
+      name: 'Docker',
+      level: 3,
+      color: 'bg-gradient-to-r from-orange-400 to-red-500',
+    },
+    {
+      name: 'Git',
+      level: 3,
+      color: 'bg-gradient-to-r from-orange-400 to-red-500',
+    },
   ];
 
   return (

@@ -34,7 +34,8 @@
 }
 
 @keyframes smoothBounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(-50%) translateY(0);
   }
   50% {
@@ -43,7 +44,8 @@
 }
 
 @keyframes arrowPulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.5;
   }
   50% {

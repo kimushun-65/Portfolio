@@ -40,9 +40,7 @@ export default function Header() {
   return (
     <header
       className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-black/80 backdrop-blur-md shadow-lg'
-          : 'bg-transparent'
+        isScrolled ? 'bg-black/80 shadow-lg backdrop-blur-md' : 'bg-transparent'
       }`}
     >
       <div className='mx-auto flex max-w-[1500px] items-center justify-between px-6 py-4 md:px-12'>
@@ -145,7 +143,7 @@ export default function Header() {
         className={`fixed left-0 right-0 top-[72px] bg-black/95 backdrop-blur-md transition-all duration-300 md:hidden ${
           isMobileMenuOpen
             ? 'max-h-screen opacity-100'
-            : 'max-h-0 opacity-0 overflow-hidden'
+            : 'max-h-0 overflow-hidden opacity-0'
         }`}
       >
         <nav className='flex flex-col px-6 py-4'>

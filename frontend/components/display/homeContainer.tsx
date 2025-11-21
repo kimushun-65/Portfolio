@@ -19,7 +19,7 @@ export default function HomeContainer() {
   useIntersectionObserver(setIsLoaded);
 
   return (
-    <div className='relative scroll-behavior: smooth; overflow-y: auto; height: 100vh;'>
+    <div className='scroll-behavior: smooth; overflow-y: auto; height: 100vh; relative'>
       <Header />
       <TopSection isLoaded={isLoaded} />
       <div className='content-section relative z-10'>

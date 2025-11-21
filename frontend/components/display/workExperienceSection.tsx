@@ -76,7 +76,7 @@ export default function WorkExperienceSection() {
 
         {/* 役割タグ */}
         <div className='mt-6 flex flex-wrap gap-2'>
-        <span className='rounded-lg bg-blue-500/10 px-3 py-1.5 text-sm font-medium text-blue-400 ring-1 ring-blue-500/20'>
+          <span className='rounded-lg bg-blue-500/10 px-3 py-1.5 text-sm font-medium text-blue-400 ring-1 ring-blue-500/20'>
             PM
           </span>
           <span className='rounded-lg bg-purple-500/10 px-3 py-1.5 text-sm font-medium text-purple-400 ring-1 ring-purple-500/20'>

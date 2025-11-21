@@ -37,7 +37,8 @@ export default function EducationSection() {
               金融市場の暴落検知を研究。安定分布の特性指数αに着目し、機械学習を組み込むことで暴落検知の精度向上を目指している
             </p>
             <p className='text-lg leading-relaxed text-gray-300'>
-              GitHub Actionsを活用したCI/CDパイプラインで、毎日の市場データを自動取得・分析し、異常を検知するシステムを構築した
+              GitHub
+              Actionsを活用したCI/CDパイプラインで、毎日の市場データを自動取得・分析し、異常を検知するシステムを構築した
             </p>
           </div>
 

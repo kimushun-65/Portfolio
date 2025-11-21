@@ -73,8 +73,10 @@ export default function StarfieldBackground({
     const time = state.clock.getElapsedTime();
 
     // よりスムーズなマウス追従（lerp使用）
-    state.camera.position.x += (mousePosition.x * 3 - state.camera.position.x) * 0.05;
-    state.camera.position.y += (-mousePosition.y * 3 - state.camera.position.y) * 0.05;
+    state.camera.position.x +=
+      (mousePosition.x * 3 - state.camera.position.x) * 0.05;
+    state.camera.position.y +=
+      (-mousePosition.y * 3 - state.camera.position.y) * 0.05;
 
     // スクロール連動のカメラズーム（より滑らかに）
     const targetZ = 5 + scrollProgress * 30;
